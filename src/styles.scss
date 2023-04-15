@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+// @import 'variables';
+$background: #D6D7FF;
+$primary: #2144FF;
+$secondary: #4563FF;
+$tertiary: #7087FF;
+$text_light: #6E8DFA;
+$text_dark: #000;
+
+// .btn-primary {
+//   background-color: $primary !important;
+//   border-color: $primary !important;
+//   color:
+// }
+.btn-light {
+  background-color: white !important;
+  color: $text_light !important;
+}
+.btn-clear {
+  background-color: transparent !important;
+  color: $text_light !important;
+  border: none !important;
+}
+
+a{
+  color: $text_light !important;
+}
+body{
+  overflow: hidden;
+}
+.bg-main{
+  background-color: $background;
+}
+.bg-white{
+  background-color: white;
+}

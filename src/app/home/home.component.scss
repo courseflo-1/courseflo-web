@@ -1,0 +1,39 @@
+@import "../../styles.scss";
+
+.poly1 {
+  position: absolute;
+  background-color: $primary;
+  width: calc(100% - 0px);
+  height: 100px;
+  right: 0;
+  bottom: 50%;
+  transform: skew(-30deg, 0deg);
+  // clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.poly2 {
+  position: absolute;
+  background-color: $secondary;
+  width: calc(100% - 15px);
+  height: 100px;
+  right: 0;
+  bottom: calc(50% + 10px);
+  transform: skew(-30deg, 0deg);
+  // clip-path: polygon(32% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.poly3 {
+  position: absolute;
+  background-color: $tertiary;
+  width: calc(100% - 30px);
+  height: 100px;
+  right: 0;
+  bottom: calc(50% + 20px);
+  transform: skew(-30deg, 0deg);
+  // clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.poly-container {
+  // overflow: hidden;
+  width: 50%;
+  right: -30px;
+  top: 70%;
+  position: absolute;
+}
