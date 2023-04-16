@@ -1,94 +1,89 @@
 <div class="container h-100 m-0 mw-100">
   <!-- sidebar -->
   <div class="row h-100">
-    <div class="col-2 bg-white">
+    <div class="col-2 bg-white" style="z-index:1;">
       <div
         class="fw-semibold fs-6 d-flex flex-column justify-content-center align-items-center"
       >
         <img
           src="assets/images/logo.png"
           alt="logo"
-          class="img-fluid px-2 py-3"
+          class="img-fluid px-2 py-4"
         />
-        <div class="py-5">dashboard</div>
-        <div class="py-5">profile</div>
-        <div class="py-5">settings</div>
+        <div class="py-4">dashboard</div>
+        <div class="py-4">profile</div>
+        <div class="py-4">settings</div>
       </div>
     </div>
-    <div class="col-10 bg-main">
-      <h1>Your Plan</h1>
-      <p>
-        2023-2024<button class="arrow-btn btn btn-primary btn-light mx-2">
+
+    <div class="col-10 bg-main ps-5" style="z-index:1;">
+      <div class="poly-container">
+        <div class="poly1"></div>
+        <div class="poly2"></div>
+        <div class="poly3"></div>
+      </div>
+      <ngx-spinner
+        bdColor="rgba(0, 0, 0, 0.5)"
+        size="medium"
+        color="#fff"
+        type="ball-scale-multiple"
+        [fullScreen]="false"
+        style="z-index:99; width:100%"
+
+        ><p style="color: white">Loading...</p></ngx-spinner
+      >
+
+      <h1 class="my-5 text-light" style="text-shadow: 3px 3px #5154d0; padding-top:20px; padding-bottom:20px;">Your Plan</h1>
+      <p class="mt-5">
+        {{ 2023 + page }}-{{ 2024 + page }}
+        <button
+          class="arrow-btn btn btn-primary btn-light mx-2"
+          (click)="decrementPage()"
+        >
           <</button
-        ><button class="arrow-btn btn btn-primary btn-light">></button>
+        ><button
+          class="arrow-btn btn btn-primary btn-light"
+          (click)="incrementPage()"
+        >
+          >
+        </button>
       </p>
       <div class="container">
         <div class="row">
           <div class="col-6">
             <h3>Fall</h3>
-            <table class="table">
+            <table class="table table-hover">
               <thead>
                 <tr>
-                  <th scope="col">completed?</th>
                   <th scope="col">course name</th>
-                  <th scope="col">requisites</th>
+                  <th>credits</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let cl of classes">
-                  <th scope="row">
-                    <input
-                      type="checkbox"
-                      class="form-check-input"
-                    />
-                  </th>
-                  <th>{{cl['abbr_name']}}</th>
-                  <th>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                    >
-                      <option selected>Choose...</option>
-                      <option value="1">EECS 101</option>
-                      <option value="2">EECS 102</option>
-                      <option value="3">EECS 103</option>
-                    </select>
-                  </th>
+                <tr *ngFor="let cl of semesters[2 * page]">
+                  <th>{{ cl["abbr_name"] }}</th>
+                  <th>{{ cl["credits"] }}</th>
+                  <th><fa-icon [icon]="faInfoCircle"></fa-icon></th>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="col-6">
             <h3>Spring</h3>
-            <table class="table">
+            <table class="table table-hover">
               <thead>
                 <tr>
-                  <th scope="col">completed?</th>
                   <th scope="col">course name</th>
-                  <th scope="col">requisites</th>
+                  <th>credits</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">
-                    <input
-                      type="checkbox"
-                      class="form-check-input"
-                      id="exampleCheck1"
-                    />
-                  </th>
-                  <th>EECS 168</th>
-                  <th>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                    >
-                      <option selected>Choose...</option>
-                      <option value="1">EECS 101</option>
-                      <option value="2">EECS 102</option>
-                      <option value="3">EECS 103</option>
-                    </select>
-                  </th>
+                <tr *ngFor="let cl of semesters[2 * page + 1]">
+                  <th>{{ cl["abbr_name"] }}</th>
+                  <th>{{ cl["credits"] }}</th>
+                  <th><fa-icon [icon]="faInfoCircle"></fa-icon></th>
                 </tr>
               </tbody>
             </table>
@@ -98,3 +93,4 @@
     </div>
   </div>
 </div>
+

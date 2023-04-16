@@ -1,0 +1,18 @@
+[debug] [2023-04-16T06:54:24.169Z] ----------------------------------------------------------------------
+[debug] [2023-04-16T06:54:24.171Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\djlynn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-16T06:54:24.172Z] CLI Version:   11.27.0
+[debug] [2023-04-16T06:54:24.172Z] Platform:      win32
+[debug] [2023-04-16T06:54:24.172Z] Node Version:  v18.15.0
+[debug] [2023-04-16T06:54:24.173Z] Time:          Sun Apr 16 2023 01:54:24 GMT-0500 (Central Daylight Time)
+[debug] [2023-04-16T06:54:24.173Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-16T06:54:24.247Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-16T06:54:24.248Z] > authorizing via signed-in user (djlynn03@gmail.com)
+[debug] [2023-04-16T06:54:24.248Z] [iam] checking project courseflo-1 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-16T06:54:24.250Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/courseflo-1:testIamPermissions [none]
+[debug] [2023-04-16T06:54:24.250Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/courseflo-1:testIamPermissions x-goog-quota-user=projects/courseflo-1
+[debug] [2023-04-16T06:54:24.250Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/courseflo-1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-16T06:54:24.473Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/courseflo-1:testIamPermissions 200
+[debug] [2023-04-16T06:54:24.473Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/courseflo-1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-16T06:54:24.474Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/courseflo-1 [none]
+[debug] [2023-04-16T06:54:24.688Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/courseflo-1 200

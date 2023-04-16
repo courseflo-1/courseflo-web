@@ -34,3 +34,9 @@ body{
 .bg-white{
   background-color: white;
 }
+*{
+  font-family: 'Nunito';
+}
+.text-light{
+  color: $background !important;
+}
